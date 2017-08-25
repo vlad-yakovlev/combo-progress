@@ -29,11 +29,11 @@ module.exports = class Progress {
 	}
 
     clear() {
-        Progress.clear(this.width);
+        Progress.clear(this);
     }
 
-    static clear(width = 80) {
-        this.stream.write('\r' + setStrLen('', width) + '\r');
+    static clear({stream = process.stdout, width = 80} = {}) {
+        stream.write('\r' + setStrLen('', width) + '\r');
     }
 };
 
