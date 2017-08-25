@@ -1,12 +1,14 @@
 'use strict';
 
 
-module.exports = class {
-	constructor({width = 80, end = 100, values = ['#'], stream = process.stdout}) {
+module.exports = class Progress {
+	constructor({width = 80, end = 100, values = ['#'], stream = process.stdout, init = [ 0 ]} = {}) {
 		this.width = width;
 		this.end = end;
 		this.values = values;
 		this.stream = stream;
+
+		this.update.apply(this, init);
 	}
 	
 	update(...values) {
@@ -25,6 +27,14 @@ module.exports = class {
 		
 		this.stream.write('\r' + getStr(setStrLen(out.join(''), width), cur, last) + '\r');
 	}
+
+    clear() {
+        Progress.clear(this.width);
+    }
+
+    static clear(width = 80) {
+        this.stream.write('\r' + setStrLen('', width) + '\r');
+    }
 };
 
 

@@ -1,7 +1,7 @@
 {
 	"name": "combo-progress",
 	"description": "Multiple progress bar",
-	"version": "1.0.0",
+	"version": "1.1.2",
 	"main": "combo-progress.js",
 	"keywords": [ "multiple", "progress" ],
 	"author": "vlad309523",
