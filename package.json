@@ -1,0 +1,11 @@
+{
+	"name": "combo-progress",
+	"description": "Multiple progress bar",
+	"version": "1.0.0",
+	"main": "combo-progress.js",
+	"keywords": [ "multiple", "progress" ],
+	"author": "vlad309523",
+	"license": "MIT",
+	"readme": "README.md",
+	"homepage": "https://bitbucket.org/vlad309523/json-helper"
+}
